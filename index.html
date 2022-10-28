@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Crie seu evento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>
+        Crie e compartilhe seu evento.
+      </h1>
+      <p>
+        O primeiro passo, é preencher esse formulário de inscrição.
+      </p>
+    </header>
+    <form id="my-form">
+      <fieldset>
+        <!-- fildset is a field grouping-->
+        <legend>Informações do evento</legend>
+        
+        <div class="input-wrapper">
+
+          <label for="event-title">Título do evento<span>(mínimo 8 caracteres)</span></label>
+          <input type="text" id="event-title" required minlength="8"/>
+
+          <label for="event-link">Link do evento<span>(comece com https://)</span></label>
+          <input type="url" id="event-link"/>
+
+          <label for="whatsapp-phone">Whatsapp para contato<span>(somente números)</span></label>
+          <input type="number" name="" id="whatsapp-phone" required minlength="8"/>
+
+          <label for="event-informations">Informações</label>
+          <textarea name="" id="event-informations" ></textarea>
+
+          <label for="event-category">Categoria</label>
+          <select id="event-category">
+            <option value="Live">Ao vivo</option>
+            <option value="Podcast">Podcast</option>
+            <option value="Mentorship">Mentoria</option>
+          </select>
+
+        </div>
+
+        <legend>Privacidade</legend>
+
+        <div class="input-wrapper">
+          <label for="email-box">E-mail do administrador<span>(digite um email válido)</span></label>
+          <input type="email" id="email-box" required/> 
+        </div>
+        <div class="input-wrapper">
+          <label for="password-box">Senha de acesso para os participantes<span>(mínimo 8 caracteres)</span></label>
+          <input type="password" name="" id="password-box" required/>
+        </div>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="event-private">
+          <label for="event-private">Evento Privado</label>
+        </div>
+          
+        <legend>Dia e hora</legend>
+
+        <div class="col-3">
+          
+          <div class="input-wrapper">
+            <label for="event-date">Data</label>
+            <input type="date" name="" id="event-date" required>
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="event-begin">Das</label>
+            <input type="time" name="" id="event-begin" required>
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="event-end">Até</label>
+            <input type="time" name="" id="event-end" required>
+          </div>
+
+        </div>
+
+
+        
+      </fieldset>
+    </form>
+    <footer>
+      <input class="button" type="submit" form="my-form" value="Salvar evento" id="send">
+
+      <!--When you have a form and a a input type submit, youhave to put the input inside the tag form, when i can't do it, in other words, when it's necessary to put the input(submit) outside the form, it is necessary to put an id inside the tag form, and inside the tag input(submit), you have to put a propety form ='', and put the name of the id iside-->
+
+
+      <!--ifyou put a button inside the form, the html will interpretate it as an input(submit) and will try to submit the form-->
+    </footer>
+  </div>
+</body>
+</html>
